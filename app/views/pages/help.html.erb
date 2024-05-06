@@ -1,0 +1,14 @@
+<div class="container mt-5">
+  <% provide :title, t("pages.help.title") %>
+  <h2 class="text-center"><%= t("pages.help.help_heading") %></h2>
+  <div class="container">
+    <div class="card-custom p-5 mt-3">
+      <p class="text-center">
+        <%= t("pages.help.help_content.get_help_ror") %>
+        <a href="<%= Settings.rails_tutorials_help_link %>"><%= t "pages.help.help_content.help_page" %></a>.
+        <%= t "pages.help.help_content.get_help_book" %>
+        <a href="<%= Settings.rails_tutorials_book_link %>"><em><%= t "pages.help.help_content.tutorial_book" %></em></a>
+      </p>
+    </div>
+  </div>
+</div>

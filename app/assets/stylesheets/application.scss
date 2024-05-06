@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+ @import "bootstrap";
+
+.nav-item {
+  &.language-option {
+    a {
+      text-decoration: none;
+      color: black;
+      background-color: lightgray;
+      padding: 5px 10px;
+      display: inline-block;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+vi:
+  logo_text: "ỨNG DỤNG MẪU"
+  language_vi: "Tiếng việt"
+  language_en: "Tiếng anh"
+  titles:
+    page_title: "Hướng dẫn Ruby on Rails với Sample app"
+    help: "trợ giúp"
+  nav_home: "Trang chủ"
+  nav_help: "Trợ giúp"
+  nav_users: "Người dùng"
+  nav_account: "Tài khoản"
+  nav_microposts: "Bài đăng"
+  nav_dropdown_login: "Đăng nhập"
+  nav_dropdown_logout: "Đăng xuất"
+  welcome: "Chào mừng đến với ứng dụng Sample App!"
+  welcome_subtitle: "Đây là trang chủ !"
+  pages:
+    help:
+      title: "Trợ giúp"
+      page_heading: "Trang#trợ-giúp"
+      description: "Tìm kiếm tôi trong app/views/pages/help.html.erb"
+      help_heading: "Trợ giúp"
+      help_content:
+        get_help_ror: "Nhận trợ giúp về Hướng dẫn Ruby on Rails tại"
+        help_page: "trang trợ giúp Hướng dẫn Rails."
+        get_help_book: "Để nhận trợ giúp về ứng dụng mẫu này, hãy xem"
+        tutorial_book: "sách hướng dẫn Ruby on Rails."
+    home:
+      title: "Trang chủ"
