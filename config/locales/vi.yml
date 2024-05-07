@@ -12,8 +12,56 @@ vi:
   nav_microposts: "Bài đăng"
   nav_dropdown_login: "Đăng nhập"
   nav_dropdown_logout: "Đăng xuất"
+  nav_dropdown_signup: "Đăng ký"
   welcome: "Chào mừng đến với ứng dụng Sample App!"
   welcome_subtitle: "Đây là trang chủ !"
+
+  activerecord:
+    models:
+      user: "Người dùng"
+    attributes:
+      user:
+        name: "Tên người dùng"
+        email: "email"
+        password: "Mật khẩu"
+        password_confirmation: "xác nhận mật khẩu"
+    errors:
+      messages:
+        model_invalid: "Xác thực không thành công: %{errors}"
+        inclusion: "không nằm trong danh sách cho phép"
+        exclusion: "đã bị dành trước"
+        invalid: "không hợp lệ"
+        confirmation: "không khớp với %{attribute}"
+        accepted: "phải được chấp nhận"
+        empty: "không được để trống"
+        blank: "không được để trống"
+        present: "phải để trống"
+        too_long:
+          one: "quá dài (tối đa 1 ký tự)"
+          other: "quá dài (tối đa %{count} ký tự)"
+        password_too_long: "quá dài"
+        too_short:
+          one: "quá ngắn (tối thiểu 1 ký tự)"
+          other: "quá ngắn (tối thiểu %{count} ký tự)"
+        wrong_length:
+          one: "sai độ dài (phải là 1 ký tự)"
+          other: "sai độ dài (phải là %{count} ký tự)"
+        not_a_number: "không phải là số"
+        not_an_integer: "phải là số nguyên"
+        greater_than: "phải lớn hơn %{count}"
+        greater_than_or_equal_to: "phải lớn hơn hoặc bằng %{count}"
+        equal_to: "phải bằng %{count}"
+        less_than: "phải nhỏ hơn %{count}"
+        less_than_or_equal_to: "phải nhỏ hơn hoặc bằng %{count}"
+        other_than: "phải khác %{count}"
+        in: "phải thuộc trong %{count}"
+        odd: "phải là số lẻ"
+        even: "phải là số chẵn"
+
+  flash:
+    user:
+      signup_success: "Tạo người dùng thành công"
+
   pages:
     help:
       title: "Trợ giúp"
@@ -27,3 +75,10 @@ vi:
         tutorial_book: "sách hướng dẫn Ruby on Rails."
     home:
       title: "Trang chủ"
+    signup:
+      title: "Đăng ký tài khoản"
+      account_question: "Bạn đã có tài khoản rồi? "
+      login_here: "Đăng nhập tại đây"
+      submit_btn: "Tạo tài khoản của tôi"
+      error: "lỗi"
+      form_contain_error: "Form chứa"

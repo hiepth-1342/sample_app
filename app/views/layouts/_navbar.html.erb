@@ -28,7 +28,7 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
           data-bs-toggle="dropdown" aria-expanded="false"><%= t("nav_account") %></a>
           <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#"><%= t("nav_dropdown_login") %></a></li>
+            <li><%= link_to t("nav_dropdown_signup"), signup_path, class:"dropdown-item" %></li>
             <li><a class="dropdown-item" href="#"><%= t("nav_account") %></a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#"><%= t("nav_dropdown_logout") %></a></li>
