@@ -1,2 +1,9 @@
 rails_tutorials_help_link: "http://www.railstutorial.org/help"
 rails_tutorials_book_link: "http://www.railstutorial.org/book"
+
+user:
+  min_len_email: 5
+  max_len_email: 255
+  min_len_password: 6
+  max_len_name: 30
+  VALID_EMAIL_REGEX: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
