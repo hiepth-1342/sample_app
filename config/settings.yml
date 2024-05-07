@@ -6,4 +6,4 @@ user:
   max_len_email: 255
   min_len_password: 6
   max_len_name: 30
-  VALID_EMAIL_REGEX: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  VALID_EMAIL_REGEX: \A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z
