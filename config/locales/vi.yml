@@ -10,9 +10,11 @@ vi:
   nav_users: "Người dùng"
   nav_account: "Tài khoản"
   nav_microposts: "Bài đăng"
-  nav_dropdown_login: "Đăng nhập"
+  nav_login: "Đăng nhập"
   nav_dropdown_logout: "Đăng xuất"
   nav_dropdown_signup: "Đăng ký"
+  nav_dropdown_profile: "Thông tin cá nhân"
+
   welcome: "Chào mừng đến với ứng dụng Sample App!"
   welcome_subtitle: "Đây là trang chủ !"
 
@@ -60,7 +62,10 @@ vi:
 
   flash:
     user:
-      signup_success: "Tạo người dùng thành công"
+      signup_success: "Tạo người dùng thành công !"
+      signup_failure: "Đăng ký thất bại !"
+      login_success: "Login thành công !"
+      login_failure: "Login Thất bại !"
 
   pages:
     help:
@@ -82,3 +87,10 @@ vi:
       submit_btn: "Tạo tài khoản của tôi"
       error: "lỗi"
       form_contain_error: "Form chứa"
+    login:
+      title: "Đăng nhập"
+      sign_in_btn: "Đăng nhập"
+      register_btn: "Đăng ký"
+      not_member_question: "Bạn chưa có tài khoản ? "
+      remember_me_label: "Ghi nhớ tôi"
+      forgot_password: "Quên mật khẩu ? "
