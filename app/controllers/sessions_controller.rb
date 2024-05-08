@@ -3,9 +3,9 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by email: params.dig(:session, :email)&.downcase
-
-    if user&.authenticate params.dig(:session, :password)
+    if user.try(:authenticate, params.dig(:session, :password))
       log_in user
+      params.dig(:session, :remember_me) == Settings.remember_me_checked ? remember(user) : forget(user)
       flash[:success] = t "flash.user.login_success"
       redirect_to user, status: :see_other
     else
