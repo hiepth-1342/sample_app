@@ -1,0 +1,17 @@
+<% provide(:title, t("pages.profile.title")) %>
+<div class="container h-100 px-3 py-3">
+  <div class="row d-flex justify-content-center align-items-center h-100">
+    <div class="col-6">
+      <div class="card" style="border-radius: 15px;">
+        <h2 class="text-center py-3"><%= t "pages.profile.title" %></h2>
+        <div class="card-body px-5">
+          <%= render "form", btn_label: t("pages.profile.save_changes_btn") %>
+          <div class="gravatar_edit">
+            <%= gravatar_for @user %>
+            <a href= <%=Settings.gravatar_link%> target="_blank"><%= t "pages.profile.change" %></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -36,4 +36,21 @@ module SessionsHelper
     cookies.delete(:user_id)
     cookies.delete(:remember_token)
   end
+
+  def current_user? user
+    user == current_user
+  end
+
+  def redirect_back default
+    redirect_to cookies[:return_to_url] || default
+    cookies.delete(:return_to_url)
+  end
+
+  def store_return_to_url
+    cookies[:return_to_url] = request.url
+  end
+
+  def can_destroy_user? user
+    current_user.admin? && !current_user?(user)
+  end
 end

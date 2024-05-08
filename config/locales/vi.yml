@@ -14,7 +14,7 @@ vi:
   nav_dropdown_logout: "Đăng xuất"
   nav_dropdown_signup: "Đăng ký"
   nav_dropdown_profile: "Thông tin cá nhân"
-
+  nav_drodown_settings: "Cài đặt"
   welcome: "Chào mừng đến với ứng dụng Sample App!"
   welcome_subtitle: "Đây là trang chủ !"
 
@@ -66,6 +66,21 @@ vi:
       signup_failure: "Đăng ký thất bại !"
       login_success: "Login thành công !"
       login_failure: "Login Thất bại !"
+      destroy_success: "Xóa thành công !"
+      destroy_failure: "Xóa thất bại !"
+      update_success: "Người dùng cập nhật thành công !"
+      not_exist: "Người dùng không tồn tại !"
+      login_before_update: "Bạn cần đăng nhập vào hệ thống trước khi cập nhật !"
+      cant_update_account: "Bạn không thể cập nhật thôn tin ở tài khoản này !"
+
+  buttons:
+    update: "Cập nhật"
+    view: "Xem"
+    detail: "Chi tiết"
+    delete: "Xóa"
+
+  confirm:
+    are_u_sure: "Bạn có chắc không ?"
 
   pages:
     help:
@@ -80,8 +95,11 @@ vi:
         tutorial_book: "sách hướng dẫn Ruby on Rails."
     home:
       title: "Trang chủ"
+    users:
+      title: "Danh sách người dùng"
     signup:
       title: "Đăng ký tài khoản"
+      sign_up_btn: "Tạo tài khoản"
       account_question: "Bạn đã có tài khoản rồi? "
       login_here: "Đăng nhập tại đây"
       submit_btn: "Tạo tài khoản của tôi"
@@ -94,3 +112,7 @@ vi:
       not_member_question: "Bạn chưa có tài khoản ? "
       remember_me_label: "Ghi nhớ tôi"
       forgot_password: "Quên mật khẩu ? "
+    profile:
+      title: "Cập nhật thông tin"
+      save_changes_btn: "Lưu thay đổi"
+      change: "Thay đổi"

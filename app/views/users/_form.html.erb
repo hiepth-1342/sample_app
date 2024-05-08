@@ -1,0 +1,22 @@
+<%= form_for @user, method: :put do |f| %>
+  <%= render "shared/error_messages", resource: @user %>
+  <div class="form-outline mb-2">
+    <%= f.label :name, class: "form-label fw-bold" %>
+    <%= f.text_field :name, class: "form-control form-control-lg" %>
+  </div>
+  <div class="form-outline mb-2">
+    <%= f.label :email, class: "form-label fw-bold" %>
+    <%= f.email_field :email, class: "form-control form-control-lg" %>
+  </div>
+  <div class="form-outline mb-2">
+    <%= f.label :password, class: "form-label fw-bold" %>
+    <%= f.password_field :password, class: "form-control form-control-lg" %>
+  </div>
+  <div class="form-outline mb-2">
+    <%= f.label :password_confirmation, class: "form-label fw-bold" %>
+    <%= f.password_field :password_confirmation, class: "form-control form-control-lg" %>
+  </div>
+  <div class="d-flex justify-content-center my-4">
+    <%= f.submit btn_label, class: "btn btn-success btn-block btn-lg gradient-custom-4 text-body" %>
+  </div>
+<% end %>
