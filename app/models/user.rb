@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  Attributes = %i(name email password password_confirmation)
+  ATTRIBUTES = %i(name email password password_confirmation).freeze
 
   before_save :downcase_email
 
@@ -16,6 +16,15 @@ class User < ApplicationRecord
                        if: :password
 
   has_secure_password
+
+  def self.digest string
+    cost = if ActiveModel::SecurePassword.min_cost
+             BCrypt::Engine::MIN_COST
+           else
+             BCrypt::Engine.cost
+           end
+    BCrypt::Password.create(string, cost:)
+  end
 
   private
   def downcase_email
