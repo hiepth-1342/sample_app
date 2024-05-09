@@ -21,12 +21,17 @@
         <li class="nav-item px-3">
           <%= link_to t("nav_help"), help_path, class:"nav-link" %>
         </li>
+
         <% if logged_in? %>
+          <li class="nav-item px-3">
+            <%= link_to t("nav_users"), users_path, class:"nav-link" %>
+          </li>
           <li class="nav-item px-3 dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-          data-bs-toggle="dropdown" aria-expanded="false"><%= t("nav_account") %></a>
+               data-bs-toggle="dropdown" aria-expanded="false"><%= t("nav_account") %></a>
             <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDropdown">
               <li><%= link_to t("nav_dropdown_profile"), current_user, class:"dropdown-item" %></li>
+              <li><%= link_to t("nav_drodown_settings"), edit_user_path(current_user), class:"dropdown-item" %></li>
               <li><hr class="dropdown-divider"></li>
               <li><%= button_to t("nav_dropdown_logout"), logout_path, method: :delete, class: "dropdown-item" %></li>
             </ul>

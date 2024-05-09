@@ -1,0 +1,14 @@
+<div class="card m-3" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= user.name %></h5>
+    <h6 class="card-subtitle mb-2 text-muted"><%= user.email %></h6>
+    <%= gravatar_for user %>
+    <div class="pt-4 d-flex justify-content-center justify-content-around flex-wrap">
+      <%= link_to t("buttons.detail"), user, class:"btn btn-secondary" %>
+      <%= link_to t("buttons.update"), edit_user_path(user), class:"btn btn-success" %>
+      <% if can_destroy_user? user %>
+        <%= button_to t("buttons.delete"), user, method: :delete, class:"btn btn-danger", form: {data: {turbo_confirm: t("confirm.are_u_sure")}} %>
+      <% end %>
+    </div>
+  </div>
+</div>

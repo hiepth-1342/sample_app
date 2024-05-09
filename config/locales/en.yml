@@ -15,7 +15,7 @@ en:
   nav_dropdown_logout: "Logout"
   nav_dropdown_signup: "Signup"
   nav_dropdown_profile: "Profile"
-
+  nav_drodown_settings: "Settings"
   welcome: "Welcome to Sample App!"
   welcome_subtitle: "This is the home page!"
 
@@ -66,6 +66,21 @@ en:
       signup_failure: "Sign up failed !"
       login_success: "Login successfully !"
       login_failure: "Login failed !"
+      destroy_success: "Delete successfully !"
+      destroy_failure: "Delete failed !"
+      update_success: "User updated successfully !"
+      not_exist: "User does not exist !"
+      login_before_update: "You need to login before updating !"
+      cant_update_account: "You are not authorized to update this account"
+
+  buttons:
+    update: "Update"
+    view: "View"
+    detail: "Detail"
+    delete: "Delete"
+
+  confirm:
+    are_u_sure: "Are you sure?"
 
   pages:
     help:
@@ -79,10 +94,12 @@ en:
         get_help_book: "To get help on this sample app, see the"
         tutorial_book: "Ruby on Rails Tutorial book."
     home:
-      title: "home"
-
+      title: "Home"
+    users:
+      title: "User list"
     signup:
       title: "Signup"
+      sign_up_btn: "Sign up"
       account_question: "Have already an account?"
       login_here: "Login here"
       submit_btn: "Create my account"
@@ -95,3 +112,7 @@ en:
       not_member_question: "Not a member? "
       remember_me_label: "Remember me"
       forgot_password: "Forgot password? "
+    profile:
+      title: "Update your profile"
+      save_changes_btn: "Save changes"
+      change: "change"
