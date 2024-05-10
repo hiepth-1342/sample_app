@@ -1,0 +1,18 @@
+<% provide(:title, t("pages.password_reset.title")) %>
+<div class="container my-5" style="max-width: 600px">
+  <div class="container">
+    <div class="card text-center col-12">
+    <div class="card-header h5 text-white bg-secondary"><%= t "pages.password_reset.title" %></div>
+    <div class="card-body px-5">
+        <%= form_for(@user, url: password_reset_path(params[:id])) do |f| %>
+          <%= render "shared/error_messages", resource: @user  %>
+          <%= hidden_field_tag :email, @user.email %>
+          <%= f.label :password, class:"fw-bolder mb-2" %>
+          <%= f.password_field :password, class: "form-control mb-4" %>
+          <%= f.label :password_confirmation, t("confirmation"), class:"fw-bolder mb-2" %>
+          <%= f.password_field :password_confirmation, class: "form-control mb-4" %>
+          <%= f.submit t("pages.password_reset.update_btn"), class: "btn btn-primary my-3" %>
+        <% end %>
+    </div>
+  </div>
+</div>
