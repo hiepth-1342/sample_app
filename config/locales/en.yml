@@ -1,4 +1,6 @@
 en:
+  say_hi: "Hi"
+  activate_link: "Activate"
   logo_text: "SAMPLE APP"
   language_vi: "Vietnamese"
   language_en: "English"
@@ -72,7 +74,11 @@ en:
       not_exist: "User does not exist !"
       login_before_update: "You need to login before updating !"
       cant_update_account: "You are not authorized to update this account"
-
+    account:
+      activation_success: "The account has been successfully activated !"
+      activation_failure: "Account not activated. Check your email for the activation link. !"
+      check_email_to_activate: "Please check your email to activate your account !"
+      activation_subject: "Account activation !"
   buttons:
     update: "Update"
     view: "View"

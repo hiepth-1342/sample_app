@@ -55,6 +55,9 @@ gem "faker"
 
 gem "pagy"
 
+gem "figaro"
+
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html]
 # gem "image_processing", "~> 1.2"
 

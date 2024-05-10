@@ -1,4 +1,6 @@
 vi:
+  say_hi: "Xin chào"
+  activate_link: "Kích hoạt"
   logo_text: "ỨNG DỤNG MẪU"
   language_vi: "Tiếng việt"
   language_en: "Tiếng anh"
@@ -72,6 +74,11 @@ vi:
       not_exist: "Người dùng không tồn tại !"
       login_before_update: "Bạn cần đăng nhập vào hệ thống trước khi cập nhật !"
       cant_update_account: "Bạn không thể cập nhật thôn tin ở tài khoản này !"
+    account:
+      activation_success: "Tài khoản được kính hoạt thành công !"
+      activation_failure: "Bạn cần kích hoạt tài khoản qua gmail !"
+      check_email_to_activate: "Check email của bạn để active tài khoản !"
+      activation_subject: "Kích hoạt tài khoản !"
 
   buttons:
     update: "Cập nhật"
