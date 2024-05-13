@@ -21,6 +21,10 @@ vi:
   welcome: "Chào mừng đến với ứng dụng Sample App!"
   welcome_subtitle: "Đây là trang chủ !"
 
+  validate:
+    valid_img_format: "file ảnh phải đúng format !"
+    less_than_mb: "Size phải bé hơn %{size}MB"
+
   activerecord:
     models:
       user: "Người dùng"
@@ -90,11 +94,20 @@ vi:
       reset_expired: "Quá trình đặt lại mật khẩu đã hết hạn."
       in_activated: "User chưa được kích hoạt !"
 
+    micropost:
+      create_success: "Đã tạo bài viết!"
+      create_failure: "Tạo bài viết không thành công!"
+      delete_success: "Đã xóa bài viết!"
+      delete_failure: "Xóa bài viết không thành công!"
+      invalid: "Bài viết không hợp lệ!"
+    login:
+      pls_login: "Please login before continuing !"
   buttons:
     update: "Cập nhật"
     view: "Xem"
     detail: "Chi tiết"
     delete: "Xóa"
+    post: "Đăng"
 
   confirm:
     are_u_sure: "Bạn có chắc không ?"
@@ -128,11 +141,14 @@ vi:
       register_btn: "Đăng ký"
       not_member_question: "Bạn chưa có tài khoản ? "
       remember_me_label: "Ghi nhớ tôi"
-      forgot_password: "Quên mật khẩu ? "
+      forgot_password: "Quên mật khẩu ?"
+
     profile:
       title: "Cập nhật thông tin"
       save_changes_btn: "Lưu thay đổi"
       change: "Thay đổi"
+      view_my_profile: "Xem profile của tôi"
+
     password_reset:
       title: "Đặt lại mật khẩu"
       instructions: "Để đặt lại mật khẩu, nhấp vào liên kết bên dưới:"
@@ -142,3 +158,9 @@ vi:
       require_enter_email: "Nhập địa chỉ email của bạn và chúng tôi sẽ gửi cho bạn một email kèm theo hướng dẫn để đặt lại mật khẩu của bạn."
       update_btn: "Cập nhật"
       submit_btn: "Gửi"
+    micropost:
+      micropost_title: "Bài viết"
+      posted_ago: "Đăng %{time_ago} trước."
+      micropost_feed: "Nguồn dữ liệu bài đăng"
+      compose_new: "Đăng bài micropost mới..."
+      microposts_count: "Bài đăng (%{microposts_count})"

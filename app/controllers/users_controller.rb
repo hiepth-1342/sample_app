@@ -5,10 +5,12 @@ class UsersController < ApplicationController
   before_action :admin_user, only: :destroy
 
   def index
-    @pagy, @users = pagy(User.all, items: Settings.per_page_user)
+    @pagy, @users = pagy(User.all, items: Settings.page_12)
   end
 
-  def show; end
+  def show
+    @page, @microposts = pagy @user.microposts, items: Settings.page_5
+  end
 
   def new
     @user = User.new
@@ -60,14 +62,6 @@ class UsersController < ApplicationController
 
     redirect_to root_path, status: :see_other
     flash[:danger] = t "flash.user.not_exist"
-  end
-
-  def logged_in_user
-    return if logged_in?
-
-    store_return_to_url
-    redirect_to login_path, status: :see_other
-    flash[:danger] = t "flash.user.login_before_update"
   end
 
   def correct_user

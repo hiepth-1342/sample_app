@@ -1,12 +1,17 @@
 <% provide :title, @user.name %>
-<div class="container my-5">
+<div class="container my-3">
   <div class="row">
-    <div class="col-md-1">
-      <%= gravatar_for @user %>
-    </div>
-    <div class="col-md-10">
+    <div class="col-md-3 d-flex flex-column align-items-center">
+      <%= gravatar_for @user, Settings.gravatar.size_150 %>
       <h3><%= @user.name %></h3>
       <p><%= @user.email %></p>
+    </div>
+    <div class="col-md-9">
+      <% if @microposts.any? %>
+        <h3 class="px-5 py-2"><%= t "pages.microposts.microposts_count", microposts_count: @user.microposts.count %></h3>
+        <ol class="microposts"><%= render @microposts %></ol>
+        <div class="px-5 py-2"><%== pagy_bootstrap_nav @page %></div>
+      <% end %>
     </div>
   </div>
 </div>

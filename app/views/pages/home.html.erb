@@ -1,5 +1,23 @@
 <% provide :title, t("pages.home.title") %>
-<div class="container my-5">
-  <h2 class="text-center"><%= t "welcome" %></h2>
-  <p class="text-center"><%= t "welcome_subtitle" %></p>
+<% if logged_in? %>
+  <div class="d-flex container">
+    <aside class="col-md-4 py-4 px-2">
+      <section class="user_info">
+        <%= render "shared/user_info" %>
+      </section>
+      <section class="micropost_form">
+        <%= render "shared/micropost_form" %>
+      </section>
+    </aside>
+    <div class="col-md-8 my-3">
+      <h2 class="text-center"><%= t "pages.micropost.micropost_feed" %></h2>
+      <%= render "shared/feed" %>
+    </div>
+  </div>
 </div>
+<% else %>
+  <div class="container my-5">
+    <h2 class="text-center"><%= t "welcome" %></h2>
+    <p class="text-center"><%= t "welcome_subtitle" %></p>
+  </div>
+<% end %>
