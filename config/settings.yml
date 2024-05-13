@@ -3,6 +3,7 @@ rails_tutorials_book_link: "http://www.railstutorial.org/book"
 remember_me_checked: "1"
 per_page_user: 12
 gravatar_link: "https://gravatar.com/emails"
+time_reset_expired: 2
 user:
   min_len_email: 5
   max_len_email: 255

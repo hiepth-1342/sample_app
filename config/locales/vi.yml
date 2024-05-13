@@ -4,6 +4,7 @@ vi:
   logo_text: "ỨNG DỤNG MẪU"
   language_vi: "Tiếng việt"
   language_en: "Tiếng anh"
+  confirmation: "Xác nhận"
   titles:
     page_title: "Hướng dẫn Ruby on Rails với Sample app"
     help: "trợ giúp"
@@ -79,6 +80,15 @@ vi:
       activation_failure: "Bạn cần kích hoạt tài khoản qua gmail !"
       check_email_to_activate: "Check email của bạn để active tài khoản !"
       activation_subject: "Kích hoạt tài khoản !"
+      password_reset_subject: "Đổi mật khẩu !"
+
+    reset_password:
+      reset_instructions: "Email đã được gửi kèm hướng dẫn đặt lại mật khẩu."
+      email_not_found: "Địa chỉ email không tồn tại."
+      not_empty: "Mật khẩu không được để trống!"
+      reset_success: "Mật khẩu đã được đặt lại!"
+      reset_expired: "Quá trình đặt lại mật khẩu đã hết hạn."
+      in_activated: "User chưa được kích hoạt !"
 
   buttons:
     update: "Cập nhật"
@@ -123,3 +133,12 @@ vi:
       title: "Cập nhật thông tin"
       save_changes_btn: "Lưu thay đổi"
       change: "Thay đổi"
+    password_reset:
+      title: "Đặt lại mật khẩu"
+      instructions: "Để đặt lại mật khẩu, nhấp vào liên kết bên dưới:"
+      reset_link: "Đặt lại mật khẩu"
+      expiration_notice: "Liên kết này sẽ hết hạn sau hai giờ."
+      ignore_notice: "Nếu bạn không yêu cầu đặt lại mật khẩu, hãy bỏ qua email này và mật khẩu của bạn sẽ không thay đổi."
+      require_enter_email: "Nhập địa chỉ email của bạn và chúng tôi sẽ gửi cho bạn một email kèm theo hướng dẫn để đặt lại mật khẩu của bạn."
+      update_btn: "Cập nhật"
+      submit_btn: "Gửi"

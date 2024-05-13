@@ -1,0 +1,17 @@
+<% provide(:title, t("pages.password_reset.title")) %>
+<div class="container my-5" style="max-width: 600px">
+  <div class="container">
+    <div class="card text-center col-12">
+    <div class="card-header h5 text-white bg-secondary"><%=t "pages.password_reset.title" %></div>
+    <div class="card-body px-5">
+        <p class="card-text py-2">
+            <%= t "pages.password_reset.require_enter_email" %>
+        </p>
+        <%= form_with(url: password_resets_path, scope: :password_reset) do |f| %>
+          <%= f.label :email, class:"fw-bolder" %>
+          <%= f.email_field :email, class: "form-control" %>
+          <%= f.submit t("pages.password_reset.submit_btn"), class: "btn btn-secondary w-100 mt-4" %>
+        <% end %>
+    </div>
+  </div>
+</div>

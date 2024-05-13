@@ -24,7 +24,7 @@
                 </div>
               </div>
               <div class="col">
-                <a href="#!"><%= t "pages.login.forgot_password" %></a>
+                <%= link_to t("pages.login.forgot_password"), new_password_reset_path %>
               </div>
             </div>
             <%= f.submit t("pages.login.sign_in_btn"), class: "btn btn-primary btn-block mb-4", type: "submit", data: { "mdb-button-init": true, "mdb-ripple-init": true } %>
