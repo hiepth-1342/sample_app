@@ -8,10 +8,12 @@ Rails.application.routes.draw do
     get "/signup", to: "users#new"
     post "/signup", to: "users#create"
     resources :users
+    resources :microposts, only: %i(create destroy)
     resources :account_activations, only: :edit
     resources :password_resets, only: %i(new edit create update)
 
     # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+    get "/microposts", to: "pages#home"
 
     # Defines the root path route ("/")
     root "pages#home"

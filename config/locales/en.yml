@@ -22,6 +22,10 @@ en:
   welcome: "Welcome to Sample App!"
   welcome_subtitle: "This is the home page!"
 
+  validate:
+    valid_img_format: "must be a valid image format"
+    less_than_mb: "should be less than %{size}MB"
+
   activerecord:
     models:
       user: "User"
@@ -89,12 +93,21 @@ en:
       reset_success: "Password has been reset!"
       reset_expired: "Password reset has expired."
       in_activated: "User is inActivated !"
+    micropost:
+      create_success: "Micropost created !"
+      create_failure: "Creating micropost failed !"
+      delete_success: "Micropost deleted !"
+      delete_failure: "Deleting micropost failed!"
+      invalid: "Micropost invalid !"
+    login:
+      pls_login: "Please login before continuing !"
 
   buttons:
     update: "Update"
     view: "View"
     detail: "Detail"
     delete: "Delete"
+    post: "Post"
 
   confirm:
     are_u_sure: "Are you sure?"
@@ -129,10 +142,12 @@ en:
       not_member_question: "Not a member? "
       remember_me_label: "Remember me"
       forgot_password: "Forgot password? "
+
     profile:
       title: "Update your profile"
       save_changes_btn: "Save changes"
       change: "change"
+      view_my_profile: "view my profile"
     password_reset:
       title: "Password reset"
       instructions: "To reset your password, click the link below:"
@@ -142,3 +157,9 @@ en:
       require_enter_email: "Enter your email address and we'll send you an email with instructions to reset your password."
       update_btn: "Update password"
       submit_btn: "submit"
+    micropost:
+      micropost_title: "microposts"
+      posted_ago: "Posted %{time_ago} ago."
+      micropost_feed: "Micropost Feed"
+      compose_new: "Compose new micropost..."
+      microposts_count: "Microposts (%{microposts_count})"

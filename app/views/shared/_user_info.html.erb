@@ -1,0 +1,8 @@
+<div class="d-flex align-items-center">
+  <%= gravatar_for current_user, Settings.gravatar.size_110 %>
+  <div class="container">
+    <h3><%= current_user.name %></h3>
+    <p><%= link_to t("pages.profile.view_my_profile"), current_user %></p>
+    <p><%= pluralize(current_user.microposts.count, t("pages.micropost.micropost_title")) %></p>
+  </div>
+</div>

@@ -2,7 +2,7 @@
   <div class="card-body">
     <h5 class="card-title"><%= user.name %></h5>
     <h6 class="card-subtitle mb-2 text-muted"><%= user.email %></h6>
-    <%= gravatar_for user %>
+    <%= gravatar_for user, Settings.gravatar.size_80 %>
     <div class="pt-4 d-flex justify-content-center justify-content-around flex-wrap">
       <%= link_to t("buttons.detail"), user, class:"btn btn-secondary" %>
       <%= link_to t("buttons.update"), edit_user_path(user), class:"btn btn-success" %>

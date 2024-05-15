@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   ATTRIBUTES = %i(name email password password_confirmation).freeze
 
+  has_many :microposts, dependent: :destroy
+
   before_save :downcase_email
 
   validates :email, presence: true,
@@ -58,6 +60,10 @@ class User < ApplicationRecord
 
   def activate
     update_columns activated: true, activated_at: Time.zone.now
+  end
+
+  def feed
+    microposts
   end
 
   def create_reset_digest

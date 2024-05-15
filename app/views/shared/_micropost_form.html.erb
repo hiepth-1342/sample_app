@@ -1,0 +1,14 @@
+<div class="container">
+  <%= form_with model: @micropost, class: "form" do |f| %>
+    <%= render "shared/error_messages", resource: @micropost %>
+    <div class="form-group mb-3">
+      <%= f.text_area :content, placeholder: t("pages.micropost.compose_new"), class: "form-control", style: "height: 150px;" %>
+    </div>
+    <%= f.submit t("buttons.post"), class: "btn btn-primary btn-block w-100" %>
+    <div class="container my-3">
+      <span class="image">
+        <%= f.file_field :image, accept: "image/jpeg,image/gif,image/png" %>
+      </span>
+    </div>
+  <% end %>
+</div>

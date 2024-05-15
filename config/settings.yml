@@ -1,8 +1,10 @@
 rails_tutorials_help_link: "http://www.railstutorial.org/help"
 rails_tutorials_book_link: "http://www.railstutorial.org/book"
 remember_me_checked: "1"
-per_page_user: 12
-gravatar_link: "https://gravatar.com/emails"
+page_12: 12
+page_7: 7
+page_5: 5
+
 time_reset_expired: 2
 user:
   min_len_email: 5
@@ -10,3 +12,17 @@ user:
   min_len_password: 6
   max_len_name: 30
   VALID_EMAIL_REGEX: \A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z
+
+micropost:
+  max_len_content: 140
+  resize_limit_500_500: [500, 500]
+  max_size_5: 5
+  img_type: ["image/jpeg", "image/gif", "image/png"]
+
+gravatar:
+  gravatar_link: "https://gravatar.com/emails"
+  size_80: 80
+  size_100: 100
+  size_110: 110
+  size_120: 120
+  size_150: 150
