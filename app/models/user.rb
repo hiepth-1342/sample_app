@@ -2,9 +2,17 @@ class User < ApplicationRecord
   ATTRIBUTES = %i(name email password password_confirmation).freeze
 
   has_many :microposts, dependent: :destroy
+  has_many :active_relationships, class_name: Relationship.name,
+                                              foreign_key: :follower_id,
+                                              dependent: :destroy
+  has_many :passive_relationships, class_name: Relationship.name,
+                                              foreign_key: :followed_id,
+                                              dependent: :destroy
+
+  has_many :following, through: :active_relationships, source: :followed
+  has_many :followers, through: :passive_relationships, source: :follower
 
   before_save :downcase_email
-
   validates :email, presence: true,
                     length: {minimum: Settings.user.min_len_email,
                              maximum: Settings.user.max_len_email},
@@ -63,7 +71,7 @@ class User < ApplicationRecord
   end
 
   def feed
-    microposts
+    Micropost.includes(:user).with_attached_image.relate_post(following_ids << id).newest
   end
 
   def create_reset_digest
@@ -78,6 +86,21 @@ class User < ApplicationRecord
 
   def password_reset_expired?
     reset_sent_at < Settings.time_reset_expired.hours.ago
+  end
+
+  # Follows a user.
+  def follow other_user
+    following << other_user unless self == other_user
+  end
+
+  # Unfollows a user.
+  def unfollow other_user
+    following.delete other_user
+  end
+
+  # Returns true if the current user is following the other user.
+  def following? other_user
+    following.include? other_user
   end
 
   private

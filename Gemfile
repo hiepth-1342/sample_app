@@ -59,7 +59,7 @@ gem "figaro"
 
 gem "active_storage_validations"
 
-gem "pry-rails", :group => :development
+gem "pry-rails", group: :development
 
 gem "image_processing"
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html]

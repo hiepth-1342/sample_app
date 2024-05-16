@@ -38,6 +38,18 @@ class UsersController < ApplicationController
     end
   end
 
+  def following
+    @title = t "pages.following.following_title"
+    @page, @users = pagy @user.following, items: Settings.page_9
+    render :show_follow, status: :unprocessable_entity
+  end
+
+  def followers
+    @title = t "pages.following.followers_title"
+    @page, @users = pagy @user.followers, items: Settings.page_9
+    render :show_follow, status: :unprocessable_entity
+  end
+
   def destroy
     if @user.destroy
       flash[:success] = t "flash.user.destroy_success"

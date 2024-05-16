@@ -1,0 +1,4 @@
+<%= form_with(model: active_relationships_with(@user),
+              html: {method: :delete, remote: true }) do |f| %>
+  <%= f.submit t("buttons.unfollow"), class: "btn btn-warning" %>
+<% end %>
