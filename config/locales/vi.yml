@@ -79,6 +79,8 @@ vi:
       not_exist: "Người dùng không tồn tại !"
       login_before_update: "Bạn cần đăng nhập vào hệ thống trước khi cập nhật !"
       cant_update_account: "Bạn không thể cập nhật thôn tin ở tài khoản này !"
+      not_found: "Không tìm thấy người dùng !"
+
     account:
       activation_success: "Tài khoản được kính hoạt thành công !"
       activation_failure: "Bạn cần kích hoạt tài khoản qua gmail !"
@@ -102,13 +104,19 @@ vi:
       invalid: "Bài viết không hợp lệ!"
     login:
       pls_login: "Please login before continuing !"
+    follow:
+      followed: "Successfully followed"
+      destroy_followed: "Successfully unfollowed"
+
   buttons:
     update: "Cập nhật"
     view: "Xem"
     detail: "Chi tiết"
     delete: "Xóa"
     post: "Đăng"
-
+    view_my_profile: "Xem thông tin cá nhân"
+    follow: "Theo dõi"
+    unfollow: "Bỏ theo dõi"
   confirm:
     are_u_sure: "Bạn có chắc không ?"
 
@@ -164,3 +172,6 @@ vi:
       micropost_feed: "Nguồn dữ liệu bài đăng"
       compose_new: "Đăng bài micropost mới..."
       microposts_count: "Bài đăng (%{microposts_count})"
+    following:
+      following_title: "Đang theo dõi"
+      followers_title: "Người theo dõi"

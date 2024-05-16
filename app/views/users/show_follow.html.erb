@@ -1,0 +1,33 @@
+<% provide(:title, @title) %>
+<div class="row">
+  <div class="col-md-4">
+    <div class="user_info container px-5 py-3">
+      <%= link_to gravatar_for(@user, Settings.gravatar.size_150), root_path %>
+      <h1><%= @user.name %></h1>
+      <span><%= link_to t("buttons.view_my_profile"), @user %></span>
+      <span>
+        <strong><%= t "pages.micropost.micropost_title" %></strong>
+        <%= @user.microposts.count %>
+      </span>
+    </div>
+    <div class="stats container px-5">
+      <%= render "shared/stats" %>
+      <% if @users.any? %>
+        <div class="user_avatars">
+          <% @users.each do |user| %>
+            <%= link_to gravatar_for(user, Settings.gravatar.size_80), user %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <h3><%= @title %></h3>
+    <% if @users.any? %>
+      <div class="d-flex flex-wrap">
+        <div class="container"><%== pagy_bootstrap_nav @page %></div>
+        <%= render @users %>
+      </div>
+    <% end %>
+  </div>
+</div>
